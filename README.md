@@ -40,4 +40,4 @@ This is the backend for the Solo React project.
 =======
 # slumblr
 Tumblr clone
->>>>>>> bc506e7bb6785cc5c11ee35e48420446230bb4d5
+
