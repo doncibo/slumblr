@@ -1,2 +1,0 @@
-# slumblr
-Tumblr clone
