@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Solo React Project
 
 This is the backend for the Solo React project.
@@ -36,3 +37,7 @@ This is the backend for the Solo React project.
 8. Add environment variables on the heroku environment using the Heroku dashboard. (Setting Heroku Config Vars)[https://devcenter.heroku.com/articles/config-vars]
 
 9. profit
+=======
+# slumblr
+Tumblr clone
+>>>>>>> bc506e7bb6785cc5c11ee35e48420446230bb4d5
