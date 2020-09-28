@@ -5,13 +5,13 @@ import { Redirect } from 'react-router-dom';
 import '../../style/loginmodal.css'
 
 function LoginButton(){
-    const username = "yusuke@example.com"
-    const password = "password"
     const currentUserId = useSelector(state => state.auth.id);
     const dispatch = useDispatch();
     
     const handleSubmit = (e) => {
         e.preventDefault();
+        const username = "yusuke@example.com";
+        const password = "password";
         dispatch(login(username, password))
     }
 
