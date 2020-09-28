@@ -7,23 +7,14 @@ import RightNav from './RightNav'
 import RightNavLogged from './RightNavLogged'
 import '../../style/navbar.css'
 
-function NavEditor(){
-    const currentUserId = useSelector(state => state.auth.id);
-    let RightNavSection = RightNav
-    if(currentUserId){
-        RightNavSection = RightNavLogged
-    }
-    return RightNavSection
-}
-
 function NavBar(){
-    const RightSection = NavEditor();
+    const currentUserId = useSelector(state => state.auth.id);
     return (
         <div className="outer-nav">
             <div className="navbar">
                 <LeftNav />
                 <MiddleNav />
-                <RightSection />
+                {currentUserId ? <RightNavLogged /> : <RightNav />}
             </div>
         </div>
     )
