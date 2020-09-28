@@ -11,6 +11,8 @@ import MenuItem from '@material-ui/core/MenuItem';
 import MenuList from '@material-ui/core/MenuList';
 import { Redirect } from 'react-router-dom';
 import { logout } from '../../store/auth';
+import UserLogo from "../../style/svg/usericon.svg"
+import HomeLogo from "../../style/svg/home.svg"
 // import { Menu } from '@material-ui/core';
 // import { makeStyles } from '@material-ui/core/styles';
 
@@ -71,6 +73,11 @@ function RightNav(){
     console.log("right bar renders when logged in")
     return(
         <div className="rightnavlogged">
+            <div >
+              <Button >
+                <img src={HomeLogo} alt='' />
+              </Button>
+            </div>
             <div>
                 <Button 
                     id="settings"
@@ -78,7 +85,9 @@ function RightNav(){
                     aria-controls={open ? 'menu-list-grow' : undefined}
                     aria-haspopup="true"
                     onClick={handleToggle}
-                >Settings</Button>
+                >
+                  <img src={UserLogo} alt='' />
+                </Button>
                 <Popper open={open} anchorEl={anchorRef.current} role={undefined} transition disablePortal>
                     {({ TransitionProps, placement }) => (
                         <Grow
