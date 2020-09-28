@@ -18,8 +18,8 @@ function LoginButton(){
     if(currentUserId) return <Redirect to="/" />;
 
     return(
-        <div className="login" onClick={handleSubmit}>
-            <button id="demologin" >Demo Sign in</button>
+        <div className="login">
+            <button id="demologin" onClick={handleSubmit}>Demo Sign in</button>
         </div>
     )
 }
