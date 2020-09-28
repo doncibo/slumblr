@@ -11,9 +11,9 @@ export default function Pages(){
         <>  
             <NavBar />
             <div className="root-container">
-                <Route path='/login' component={LoginPage} />
-                <Route path='/signup' component={SignUp} />
-                <Route path='/' component={Home} />
+                <Route path="/login" component={LoginPage} />
+                <Route path="/signup" component={SignUp} />
+                <Route path="/" component={Home} />
             </div>
         </>
     )
