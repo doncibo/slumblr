@@ -7,10 +7,6 @@ import RightNav from './RightNav'
 import RightNavLogged from './RightNavLogged'
 import '../../style/navbar.css'
 
-<<<<<<< HEAD
-
-=======
->>>>>>> ed504194e45ba70bc80b4b7780ccc85d4f9d3f9e
 function NavBar(){
     const currentUserId = useSelector(state => state.auth.id);
     return (
