@@ -9,9 +9,9 @@ import '../../style/loginmodal.css'
 
 function RightNav(){
     return(
-        <div className="rightnav">
+        <div className='rightnav'>
             {/* <LoginButton /> */}
-            <DemoLoginButton />
+            {/* <DemoLoginButton /> */}
             {/* <SignUpButton /> */}
         </div>
     )

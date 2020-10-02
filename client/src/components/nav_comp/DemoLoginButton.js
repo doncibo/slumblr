@@ -2,6 +2,7 @@ import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { login } from '../../store/auth';
 import { Redirect } from 'react-router-dom';
+import Button from '@material-ui/core/Button';
 import '../../style/loginmodal.css'
 
 function LoginButton(){
@@ -19,7 +20,7 @@ function LoginButton(){
 
     return(
         <div className="login">
-            <button id="demologin" onClick={handleSubmit}>Demo Sign in</button>
+            <Button id="demologin" onClick={handleSubmit}>Demo Sign in</Button>
         </div>
     )
 }

@@ -51,7 +51,7 @@ function RightNav(){
       
       setOpen(false);
       
-      return <Redirect to="/profile" />
+      return <Redirect to='/profile' />
     
     };
 

@@ -1,0 +1,6 @@
+.text-form-container {
+    display: flex;
+    width: 540px;
+    height: 400px;
+    background-color: white;
+}

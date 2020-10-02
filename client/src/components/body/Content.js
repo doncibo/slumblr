@@ -29,7 +29,7 @@ function Comp(){
                                 src={post.url}
                                 url={post.url}
                                 alt=''      
-                            />
+                            /> {post.description}
                         </div>
                     ))}
                 </div>

@@ -74,7 +74,7 @@
     justify-content: flex-end;
 }
 
-#login {
+/* #login {
     border: 1px solid #4b4b4b;
     border-radius: 5px;
     color: white;
@@ -83,9 +83,9 @@
     width: 60px;
     height: 25px;
     flex-basis: auto;
-}
+} */
 
-#demologin {
+/* #demologin {
     border: 1px solid #4b4b4b;
     border-radius: 5px;
     color: white;
@@ -94,7 +94,7 @@
     width: 100px;
     height: 25px;
     flex-basis: auto;
-}
+} */
 #signup {
     border: 1px solid #4b4b4b;
     border-radius: 5px;

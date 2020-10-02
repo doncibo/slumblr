@@ -114,7 +114,6 @@
     text-decoration: none;
     text-align: center;
     font-size: 18px;
-    
     border-radius: 5px;
     color: white;
     background-color: rgb(8, 174, 240);
@@ -124,7 +123,7 @@
     margin-bottom: 10px;
 }
 
-#to-signin-button {
+#to-signin-button, #demologin {
     text-decoration: none;
     text-align: center;
     font-size: 18px;
