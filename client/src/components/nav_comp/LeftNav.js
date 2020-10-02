@@ -8,7 +8,7 @@ function LeftNav(){
   
     return(
         <div className="leftnav">
-            <Link to="/profile" id="logo">
+            <Link to='/' id="logo">
                 <img id='logoimg' src={Logo} alt='' />
             </Link>
             

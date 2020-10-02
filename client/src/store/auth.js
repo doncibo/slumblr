@@ -45,19 +45,21 @@ export const login = (username, password) => {
     }
 };
 
-export const signup = (username, email, password, password2) => {
+export const signup = (username, email, password, confirmPassword) => {
     return async dispatch => {
         const csrfToken = Cookies.get("XSRF-TOKEN");
-        const res = await fetch('/api/users', {
+        const res = await fetch("/api/users", {
             method: "POST",
             headers: {
-                "Content-Type": "application/json",
+                'Content-Type': 'application/json',
                 "X-CSRF-TOKEN": csrfToken,
             },
-            body: JSON.stringify({username, email, password, password2}),
+            body: JSON.stringify({username, email, password, confirmPassword}),
+        
         });
         res.data = await res.json()
-       
+       console.log(res.data)
+       console.log(res)
         dispatch(newUser(res.data.user));
         
         return res
@@ -70,9 +72,10 @@ export const logout = () => {
         const res = await fetch('/api/session', {
             method: "DELETE",
             headers: {
-                "X-CSRF-TOKEN": csrfToken,
+                "X-CSRF-TOKEN": csrfToken, 
             },
         })
+        Cookies.remove("token")
         dispatch(removeUser());
         res.data = await res.json();
         return res;

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { signup, login } from '../store/auth';
 import { Redirect } from 'react-router-dom';
-import { Container } from '@material-ui/core'
+import { Container, Button } from '@material-ui/core'
 
 import '../style/signup.css'
 
@@ -20,7 +20,7 @@ function SignUp() {
         dispatch(login(username, password))
     }
 
-    if(currentUserId) return <Redirect to="/profile" />;
+    if(currentUserId) return <Redirect to="/" />;
 
     return(
         <>
@@ -59,15 +59,15 @@ function SignUp() {
                         </label>
                         <label>
                             <input 
-                                id="password-input"
-                                type="password" 
-                                name="password" 
+                                id='password-input2'
+                                type='password' 
+                                name='confirmPassword' 
                                 value={password2} 
                                 onChange={e => setPassword2(e.target.value)} 
                                 placeholder="Confirm Password"
                             />
                         </label>
-                        <button id="signin-button" type="submit" >Sign up</button>
+                        <Button id="signup-button" type="submit" >Sign up</Button>
                     </form>
                 </Container>
             </div>

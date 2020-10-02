@@ -1,0 +1,31 @@
+.user-actions {
+    font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Garuda, Verdana, Tahoma, sans-serif;
+    float: right;
+    width: 400px;
+    height: 100vh;
+    margin-top: 40px;
+    margin-left: 0px;
+    background-color: rgba(255, 255, 255, 0);
+    color: white;
+}
+
+#action-box {
+    margin-top: 150px;
+    width: 100%;
+    height: 260px;
+    background-color: rgba(255, 255, 255, 0);
+    justify-items: right;
+    color: white;
+    
+}
+
+#username {
+    width: 100%;
+    height: 46px
+}
+
+#action-button {
+    width: 100%;
+    height: 46px;
+    color: white;
+}

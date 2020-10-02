@@ -48,4 +48,17 @@ router.put(
   })
 );
 
+router.delete("/", asyncHandler((req, res) => {
+  try {
+    res.cookie("token", {
+      expires: new Date(Date.now() - 900000)
+    });
+    res.json({
+      message: "Success!"
+    })
+  } catch(e) {
+    next(e)
+  }
+}))
+
 module.exports = router;

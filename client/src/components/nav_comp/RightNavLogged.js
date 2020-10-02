@@ -9,10 +9,11 @@ import Paper from '@material-ui/core/Paper';
 import Popper from '@material-ui/core/Popper';
 import MenuItem from '@material-ui/core/MenuItem';
 import MenuList from '@material-ui/core/MenuList';
-import { Redirect } from 'react-router-dom';
+import { NavLink, Redirect } from 'react-router-dom';
 import { logout } from '../../store/auth';
 import UserLogo from "../../style/svg/usericon.svg"
 import HomeLogo from "../../style/svg/home.svg"
+
 // import { Menu } from '@material-ui/core';
 // import { makeStyles } from '@material-ui/core/styles';
 
@@ -42,17 +43,18 @@ function RightNav(){
     setOpen(false);
     
     dispatch(logout())
-    return <Redirect to="/login" />
+    return (<Redirect to='/login' />)
     };
 
     const handleProfile = (event) => {
-      if (anchorRef.current && anchorRef.current.contains(event.target)) {
-        
-      }
+      
+      
       setOpen(false);
+      
       return <Redirect to="/profile" />
     
     };
+
   
     function handleListKeyDown(event) {
       if (event.key === 'Tab') {
@@ -74,9 +76,13 @@ function RightNav(){
     return(
         <div className="rightnavlogged">
             <div >
-              <Button >
-                <img src={HomeLogo} alt='' />
-              </Button>
+              <NavLink to='/' >
+                <Button
+                  onClick={() => <Redirect to='/' />}
+                >
+                  <img src={HomeLogo} alt=''/>  
+                </Button>
+              </NavLink>
             </div>
             <div>
                 <Button 
@@ -96,9 +102,9 @@ function RightNav(){
                         >
                             <Paper>
                                 <ClickAwayListener onClickAway={handleClose}>
-                                <MenuList autoFocusItem={open} id="menu-list-grow" onKeyDown={handleListKeyDown}>
-                                    <MenuItem onClick={handleProfile}>Profile</MenuItem>
-                                    <MenuItem onClick={handleLogOut}>Logout</MenuItem>
+                                <MenuList autoFocusItem={open} id="menu-list-grow" onKeyDown={handleListKeyDown}>                                   
+                                    <MenuItem onClick={handleProfile}><NavLink to='/profile' id='navlink-profile'>Profile</NavLink></MenuItem>
+                                    <MenuItem onClick={handleLogOut}><NavLink to='/login' id='navlink-login'>Logout</NavLink></MenuItem>
                                 </MenuList>
                                 </ClickAwayListener>
                             </Paper>

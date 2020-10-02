@@ -47,6 +47,21 @@ module.exports = (sequelize, DataTypes) => {
   );
 
   User.associate = function(models) {
+    // User.belongsToMany(User, {
+		// 	as: 'followee',
+		// 	through: models.Follow,
+		// 	foreignKey: 'followeeId',
+		// 	otherKey: 'followerId',
+    // });
+    // User.belongsToMany(User, {
+		// 	as: 'follower',
+		// 	through: models.Follow,
+		// 	foreignKey: 'followeeId',
+		// 	otherKey: 'followerId',
+    // });
+    User.hasMany(models.Like, { foreignKey: 'userId' });
+    User.hasMany(models.Post, { foreignKey: 'userId' });
+    User.hasMany(models.Comment, { foreignKey: 'userId' });
   };
 
   User.prototype.toSafeObject = function() {
@@ -84,6 +99,7 @@ module.exports = (sequelize, DataTypes) => {
       email,
       hashedPassword
     });
+    console.log(user)
     return await User.scope("currentUser").findByPk(user.id);
   };
 
