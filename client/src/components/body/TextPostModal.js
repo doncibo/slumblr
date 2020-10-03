@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { login } from '../../store/auth';
 import { Redirect } from 'react-router-dom';
-import { Container } from '@material-ui/core'
+import { Container, Button } from '@material-ui/core'
 import '../../style/textform.css'
 
 function TextModal() {
@@ -45,10 +45,11 @@ function TextModal() {
                                 hidden="true"
                             />
                         </label>
-                        <button id="text-post-button" type="submit" onClick={handleSubmit}>Submit</button>
+                        <Button id="text-post-button" type="submit" onClick={handleSubmit}>Post</Button>
                     </form>
                 </Container>
             </div>
+            
         </>
     )
 
