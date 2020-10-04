@@ -59,8 +59,10 @@ app.use((err, _req, _res, next) => {
   if (err instanceof ValidationError) {
     err.errors = err.errors.map((e) => e.message);
     err.title = "Sequelize Error";
+    console.log(err)
   }
-  err.status = 422;
+  // err.status = 422;
+  console.log(err)
   next(err);
 });
 

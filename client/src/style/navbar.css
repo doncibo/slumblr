@@ -1,0 +1,135 @@
+/* TODO Add site wide styles */
+/*  classes: leftnav, rightnav, middlenav, navbar, rightnavlogged
+    id: logo, home, library, search, signin, signup, settings
+*/
+
+.navbar {
+    position: static;
+    display: flex;
+    position: fixed;
+    width: 100%;
+    height: 54px;
+    background-color: inherit;
+    margin-left: 10px;
+    margin-right: 128px;
+    font: 100 14px/1.5 Interstate,Lucida Grande,Arial,sans-serif;
+    flex-grow: 0;
+    
+}
+
+.leftnav {
+    position: initial;
+    display: inherit;
+    width: 6%;
+    height: inherit;
+    overflow: visible;
+}
+
+#logo {
+    position: static;
+    width: 100%;
+    height: inherit;
+    border: inherit;
+    text-align: center;
+}
+
+#logoimg {
+    position: static;
+    width: auto;
+    margin-top: 3px;
+    height: 100%;
+}
+
+.middlenav {
+    width: 100%;
+    height: inherit;
+    margin-left: 0px;
+    text-align: left;
+    position: relative;
+}
+
+#search {
+    position: relative;
+    height: 30px;
+    width: 50%;
+    margin-top: 15px;
+    margin-left: 0px;
+    border: 1px;
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.13);
+    
+}
+
+#search:focus {
+    background: white;
+}
+.rightnav {
+    display: inherit;
+    width: 100%;
+    height: inherit;
+    font: inherit;
+    padding: 13px;
+    border-radius: 5px;
+    align-content: flex-end;
+    justify-content: flex-end;
+}
+
+/* #login {
+    border: 1px solid #4b4b4b;
+    border-radius: 5px;
+    color: white;
+    background-color: inherit;
+    margin-right: 10px;
+    width: 60px;
+    height: 25px;
+    flex-basis: auto;
+} */
+
+/* #demologin {
+    border: 1px solid #4b4b4b;
+    border-radius: 5px;
+    color: white;
+    background-color: inherit;
+    margin-right: 10px;
+    width: 100px;
+    height: 25px;
+    flex-basis: auto;
+} */
+#signup {
+    border: 1px solid #4b4b4b;
+    border-radius: 5px;
+    color: white;
+    background-color: rgb(8, 174, 240);
+    height: 25px;
+}
+
+.rightnavlogged {
+    display: inherit;
+    height: inherit;
+    width: 100%;
+    font: inherit;
+    border-radius: 5px;
+    padding: 8px;
+    justify-content: flex-end;
+}
+
+#settings {
+    justify-self: flex-end;
+    float: inline-end;
+    font: inherit;
+    color: white;
+}
+
+#home-icon {
+    fill: "rgba(255, 255, 255, 0.20)";
+    
+}
+#navlink-login {
+    color: black;
+    text-decoration: none;
+}
+#navlink-profile {
+    color: black;
+    text-decoration: none;
+}
+ 
