@@ -11,7 +11,7 @@ function TextModal() {
     const [description, setDescription] = useState('')
     const [title, setTitle] = useState('')
     const currentUserId = useSelector(state => state.auth.id);
-    // const dispatch = useDispatch();
+    const dispatch = useDispatch();
     
     const handleSubmit = (e) => {
         e.preventDefault();
