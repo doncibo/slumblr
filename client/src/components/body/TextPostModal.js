@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { login } from '../../store/auth';
+import { createPost } from '../../store/posts';
 import { Redirect } from 'react-router-dom';
 import { Container, Button } from '@material-ui/core'
 import '../../style/textform.css'
@@ -15,7 +15,7 @@ function TextModal() {
     
     const handleSubmit = (e) => {
         e.preventDefault();
-        // dispatch(login(username, password))
+        dispatch(createPost(title, url, description, currentUserId))
     }
 
     // if(currentUserId) return <Redirect to="/" />;

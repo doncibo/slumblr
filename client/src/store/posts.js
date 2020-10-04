@@ -18,14 +18,14 @@ export const fetchPosts = () => async dispatch => {
     }
 }
 
-export const createPost = (url, description, userId) => async dispatch => {
+export const createPost = (title, url, description, userId) => async dispatch => {
     // console.log(body);
 	const res = await fetch('/api/posts', {
 		method: 'POST',
 		headers: {
 			'Content-Type': 'application/json',
 		},
-		body: JSON.stringify({url, description, userId}),
+		body: JSON.stringify({title, url, description, userId}),
 	});
 
 	if (res.ok) {
