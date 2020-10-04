@@ -9,6 +9,7 @@ function TextModal() {
     const [userId, setUserId] = useState('')
     const [url, setUrl] = useState('')
     const [description, setDescription] = useState('')
+    const [title, setTitle] = useState('')
     const currentUserId = useSelector(state => state.auth.id);
     // const dispatch = useDispatch();
     
@@ -25,6 +26,18 @@ function TextModal() {
                 <Container className="create-text-form" >
             
                     <form onSubmit={handleSubmit}>
+                        <label>
+                            <h1 >
+                                <textarea 
+                                    id="title-input"
+                                    type="text" 
+                                    name="title" 
+                                    value={title} 
+                                    onChange={e => setTitle(e.target.value)}
+                                    placeholder="Title" 
+                                />
+                            </h1>
+                        </label>
                         <label>
                             <textarea 
                                 id="description-input"

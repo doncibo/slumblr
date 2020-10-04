@@ -1,13 +1,14 @@
 .text-form-container {
     display: flex;
-    width: 540px;
+    width: 640px;
     height: 100vh;
     background-color: rgba(255, 255, 255, 0);
     align-items: center;
+    text-align: left;
 }
 
 .create-text-form {
-    width: 540px;
+    width: 640px;
     height: 400px;
     border-radius: 5px;
     background-color: white;
@@ -15,10 +16,39 @@
 }
 
 #description-input {
+    resize: none;
     width: 500px;
-    height: 300px;
+    height: 200px;
+    font-size: 14px;
+    font-family: 'Gibson','Helvetica Neue','HelveticaNeue',Helvetica,Arial,sans-serif;
+    border: 0px rgba(255, 255, 255, 0)
+}
+
+#description-input:focus {
+    outline: none;
 }
 
 #text-post-button {
     background-color: rgb(8, 174, 240);
+}
+
+#title-input {
+    resize: none;
+    width: 500px;
+    height: 50px;
+    font-size: 36px;
+    font-family: 'Gibson','Helvetica Neue','HelveticaNeue',Helvetica,Arial,sans-serif;
+    border: 0px rgba(255, 255, 255, 0)
+}
+#title-input:focus{
+    outline: none;
+    width: 500px;
+    height: 50px;
+    font-size: 36px;
+    font-family: 'Gibson','Helvetica Neue','HelveticaNeue',Helvetica,Arial,sans-serif;
+    border: 0px rgba(255, 255, 255, 0)
+}
+#title-input::placeholder {
+    font-size: 36px;
+    color: rgb(44, 44, 44);
 }
