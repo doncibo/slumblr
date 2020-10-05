@@ -32,7 +32,7 @@
     background-color: rgb(8, 174, 240);
 }
 
-#title-input {
+#title-input, #url-input {
     resize: none;
     width: 500px;
     height: 50px;
@@ -40,7 +40,7 @@
     font-family: 'Gibson','Helvetica Neue','HelveticaNeue',Helvetica,Arial,sans-serif;
     border: 0px rgba(255, 255, 255, 0)
 }
-#title-input:focus{
+#title-input:focus, #url-input:focus {
     outline: none;
     width: 500px;
     height: 50px;
@@ -48,7 +48,7 @@
     font-family: 'Gibson','Helvetica Neue','HelveticaNeue',Helvetica,Arial,sans-serif;
     border: 0px rgba(255, 255, 255, 0)
 }
-#title-input::placeholder {
+#title-input::placeholder, #url-input::placeholder {
     font-size: 36px;
     color: rgb(44, 44, 44);
 }

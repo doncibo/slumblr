@@ -3,6 +3,7 @@ import Text from '../../style/svg/text.svg'
 import Camera from '../../style/svg/camera.svg'
 import LinkVariant from '../../style/svg/link-variant.svg'
 import TextPost from './TextPostModal'
+import LinkPost from './LinkPostModal'
 import '../../style/createpost.css'
 // import HomeLogo from '../../style/Home'
 // import { Link } from 'react-router-dom';
@@ -18,16 +19,23 @@ import Modal from '@material-ui/core/Modal';
 // import MenuList from '@material-ui/core/MenuList';
 
 function Comp(){
+    const linkPost = LinkPost()
     const textPost = TextPost()
     const [open, setOpen] = React.useState(false);
+    const [openLink, setOpenLink] = React.useState(false);
     // const anchorRef = React.useRef(null);
   
     const handleClose = () => {
         setOpen(false);
+        setOpenLink(false);
     };
     
     const handleOpen = () => {
         setOpen(true);
+    };
+
+    const handleLinkOpen = () => {
+        setOpenLink(true);
     };
     
 
@@ -40,7 +48,7 @@ function Comp(){
             <Button id='photo-post'>
                 <img src={Camera} alt=''></img>Photo
             </Button>
-            <Button id='link-post'>
+            <Button id='link-post' onClick={handleLinkOpen}>
                 <img src={LinkVariant} alt=''></img>Link
             </Button>
             <Modal 
@@ -51,6 +59,24 @@ function Comp(){
                 aria-describedby="simple-modal-description"
                 >
                     {textPost}
+            </Modal>
+            {/* <Modal 
+                className="login-form-outer"
+                open={open}
+                onClose={handleClose}
+                aria-labelledby="simple-modal-title"
+                aria-describedby="simple-modal-description"
+                >
+                    {textPost}
+            </Modal> */}
+            <Modal 
+                className="login-form-outer"
+                open={openLink}
+                onClose={handleClose}
+                aria-labelledby="simple-modal-title"
+                aria-describedby="simple-modal-description"
+                >
+                    {linkPost}
             </Modal>
         </div>
     )

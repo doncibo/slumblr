@@ -4,7 +4,7 @@ module.exports = {
   up: (queryInterface, Sequelize) => {
     return queryInterface.bulkInsert('Posts', [
       // { url: 'https://slumblrapp.s3.amazonaws.com/pexels-pixabay-326055.jpg', description: 'dis junt fresh mane', userId: 1 },
-      { title: "", url: 'https://images.pexels.com/photos/1292115/pexels-photo-1292115.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260', description: 'dis junt fresh mane', userId: 1 },
+      { title: "", url: 'https://images.pexels.com/photos/1292115/pexels-photo-1292115.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260', description: 'this is a very nice photo', userId: 1 },
     ]);
     /*
       Add altering commands here.

@@ -1,3 +1,4 @@
+import Cookies from 'js-cookie';
 export const GET_POST = 'slumblr/posts/GET_POST'
 
 const gotPost = posts => ({
@@ -19,11 +20,13 @@ export const fetchPosts = () => async dispatch => {
 }
 
 export const createPost = (title, url, description, userId) => async dispatch => {
-    // console.log(body);
+	// console.log(body);
+	const csrfToken = Cookies.get("XSRF-TOKEN");
 	const res = await fetch('/api/posts', {
 		method: 'POST',
 		headers: {
 			'Content-Type': 'application/json',
+			"X-CSRF-TOKEN": csrfToken,
 		},
 		body: JSON.stringify({title, url, description, userId}),
 	});
@@ -34,7 +37,6 @@ export const createPost = (title, url, description, userId) => async dispatch =>
 		console.log(res);
 	}
 };
-
 
 export default function reducer(state = [], action) {
 	switch (action.type) {
