@@ -9,8 +9,8 @@ import '../../style/content.css'
 // import { Route } from 'react-router-dom';
 
 
-function Comp(){
-    const posts = useSelector(state => state.posts)
+function Comp({posts}){
+    // const posts = useSelector(state => state.posts)
     return(
         <div className='content-wrap' >
             <div className='contentBanner' >

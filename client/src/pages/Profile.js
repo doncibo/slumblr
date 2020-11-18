@@ -4,10 +4,6 @@ import { fetchPosts } from '../store/posts';
 import '../style/profile.css'
 import Content from '../components/body/Content'
 import UserAction from '../components/body/UserActions'
-// import AudioPlay from '../components/AudioPlayer'
-// import Button from '@material-ui/core/Button';
-// import { Route } from 'react-router-dom';
-
 
 function Profile(){
     const dispatch = useDispatch()

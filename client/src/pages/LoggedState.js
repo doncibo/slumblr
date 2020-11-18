@@ -1,11 +1,12 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Button from '@material-ui/core/Button';
 import { Link } from 'react-router-dom';
 import Logo from '../style/svg/slumblr_text.svg'
 import Content from '../components/body/Content'
 import UserAction from '../components/body/UserActions'
 import DemoLoginButton from '../components/nav_comp/DemoLoginButton'
-// import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import { fetchPosts } from '../store/posts';
 
 
 export function LoggedOut() {
@@ -26,10 +27,17 @@ export function LoggedOut() {
 }
 
 export function LoggedIn (){
+    const dispatch = useDispatch()
+    const currentUserId = useSelector(state => state.auth.id);
+    const posts = useSelector(state => state.posts)
+    
+    useEffect(() => {
+        dispatch(fetchPosts())
+    }, [])
     return (
         <div className="main" >
             <div className='home-content' >
-                <Content />
+                <Content posts={posts} />
                 <UserAction />
             </div>
         </div>

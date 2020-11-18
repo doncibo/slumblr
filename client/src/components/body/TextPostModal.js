@@ -10,12 +10,17 @@ function TextModal() {
     const [url, setUrl] = useState('')
     const [description, setDescription] = useState('')
     const [title, setTitle] = useState('')
+    const [loading, setLoading] = useState(false)
     const currentUserId = useSelector(state => state.auth.id);
     const dispatch = useDispatch();
     
     const handleSubmit = (e) => {
+        setLoading(true)
         e.preventDefault();
         dispatch(createPost(title, url, description, currentUserId))
+        setLoading(false)
+        window.location.reload()
+        
     }
 
     // if(currentUserId) return <Redirect to="/" />;
