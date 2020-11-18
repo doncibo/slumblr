@@ -48,6 +48,14 @@
     background-color: #011c3b;
 }
 
+.home-content {
+    display: inherit;
+    flex-direction: row;
+    margin: 40px auto 0;
+    max-width: 1200px;
+    height: 100vh;
+}
+
 .main {
     display: flex;
     width: 990px;

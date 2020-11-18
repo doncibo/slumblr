@@ -52,7 +52,7 @@ function Comp(){
                 <img src={LinkVariant} alt=''></img>Link
             </Button>
             <Modal 
-                className="login-form-outer"
+                className="create-post-outer"
                 open={open}
                 onClose={handleClose}
                 aria-labelledby="simple-modal-title"
@@ -61,7 +61,7 @@ function Comp(){
                     {textPost}
             </Modal>
             {/* <Modal 
-                className="login-form-outer"
+                className="create-post-outer"
                 open={open}
                 onClose={handleClose}
                 aria-labelledby="simple-modal-title"
@@ -70,7 +70,7 @@ function Comp(){
                     {textPost}
             </Modal> */}
             <Modal 
-                className="login-form-outer"
+                className="create-post-outer"
                 open={openLink}
                 onClose={handleClose}
                 aria-labelledby="simple-modal-title"

@@ -8,11 +8,8 @@ const gotPost = posts => ({
 
 export const fetchPosts = () => async dispatch => {
     const res = await fetch('/api/posts');
-    console.log(res)
     if(res.ok){
-        console.log('this is the res from get post', res)
         const data = await res.json();
-        console.log(data)
         dispatch(gotPost(data))
     } else {
         console.log(res)

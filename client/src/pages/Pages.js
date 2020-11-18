@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, Switch } from 'react-router-dom' ;
+import { BrowserRouter, Route, Switch } from 'react-router-dom' ;
 import LoginPage from './LoginPage';
 import SignUp from './SignUp';
 import Home from './Home';
@@ -13,17 +13,19 @@ export default function Pages(){
     // const currentUserId = useSelector(state => state.auth.id);
     return (
         <div className="page-container" > 
-            <NavBar >
-            </NavBar>
-            <Switch >
-                <Route path='/profile' component={Profile}/>
+            <BrowserRouter >
+                <NavBar >
+                </NavBar>
+                <Switch >
+                    <Route path='/profile' component={Profile}/>
 
-                <Route path='/login' component={LoginPage} />
+                    <Route path='/login' component={LoginPage} />
 
-                <Route path='/signup' component={SignUp} />
+                    <Route path='/signup' component={SignUp} />
 
-                <Route path='/' component={Home} />
-            </Switch>
+                    <Route path='/' component={Home} />
+                </Switch>
+            </BrowserRouter>
                 
             <div >
             </div>

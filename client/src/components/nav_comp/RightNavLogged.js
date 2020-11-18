@@ -14,10 +14,6 @@ import { logout } from '../../store/auth';
 import UserLogo from "../../style/svg/usericon.svg"
 import HomeLogo from "../../style/svg/home.svg"
 
-// import { Menu } from '@material-ui/core';
-// import { makeStyles } from '@material-ui/core/styles';
-
-// import { Link } from 'react-router-dom';
     
 function RightNav(){
     const dispatch = useDispatch();
@@ -71,8 +67,6 @@ function RightNav(){
       prevOpen.current = open;
     }, [open]);
   
-
-    console.log("right bar renders when logged in")
     return(
         <div className="rightnavlogged">
             <div >

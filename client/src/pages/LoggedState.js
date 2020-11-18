@@ -28,7 +28,7 @@ export function LoggedOut() {
 export function LoggedIn (){
     return (
         <div className="main" >
-            <div className='profile-container' >
+            <div className='home-content' >
                 <Content />
                 <UserAction />
             </div>

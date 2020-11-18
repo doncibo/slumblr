@@ -32,6 +32,7 @@ router.put(
   validateLogin,
   handleValidationErrors,
   asyncHandler(async function (req, res, next) {
+    console.log("logging")
     const user = await User.login(req.body);
     if (user) {
       const token = await generateToken(user);

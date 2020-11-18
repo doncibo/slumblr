@@ -11,19 +11,23 @@ import UserAction from '../components/body/UserActions'
 
 function Profile(){
     const dispatch = useDispatch()
+    const currentUserId = useSelector(state => state.auth.id);
     const posts = useSelector(state => state.posts)
-
+    const profilePosts = []
     useEffect(() => {
         dispatch(fetchPosts())
     }, [])
-    console.log(posts.map(post => console.log(post)))
-    console.log(posts)
+    posts.map(post => {
+        if(post.userId === currentUserId){
+            profilePosts.push(post)
+        }
+    })
     // const currentUsername = useSelector(state => state.auth.username);
     return (
         <>  
             <div className='main-profile' >
                 <div className='profile-container' >
-                    <Content />
+                    <Content posts={profilePosts} />
                     <UserAction />
                 </div>
             </div>

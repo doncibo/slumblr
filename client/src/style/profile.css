@@ -1,7 +1,7 @@
 .main-profile {
     display: flex;
     width: 100%;
-    height: 3200px;
+    height: fit-content;
     background-color: #011c3b;
     flex-direction: row;
 }
@@ -10,7 +10,7 @@
     display: inherit;
     flex-direction: row;
     margin: 40px auto 0;
-    max-width: 990px;
+    max-width: 1200px;
     height: 100vh;
 }
 
