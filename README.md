@@ -1,4 +1,5 @@
-<<<<<<< HEAD
+![Site Preview](slumblr_screen.png)
+
 # Solo React Project
 
 This is the backend for the Solo React project.
