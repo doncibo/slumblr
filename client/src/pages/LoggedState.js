@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import Button from '@material-ui/core/Button';
 import { Link } from 'react-router-dom';
 import Logo from '../style/svg/slumblr_text.svg'
-import Content from '../components/body/Content'
+import HomeContent from '../components/body/HomeContent'
 import UserAction from '../components/body/UserActions'
 import DemoLoginButton from '../components/nav_comp/DemoLoginButton'
 import { useDispatch, useSelector } from 'react-redux';
@@ -37,8 +37,10 @@ export function LoggedIn (){
     return (
         <div className="main" >
             <div className='home-content' >
-                <Content posts={posts} />
-                <UserAction />
+                <HomeContent posts={posts} />
+                <div>
+                    <UserAction />
+                </div>
             </div>
         </div>
     

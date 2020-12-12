@@ -5,7 +5,7 @@ import '../style/profile.css'
 import Content from '../components/body/Content'
 import UserAction from '../components/body/UserActions'
 
-function Profile(){
+function UserPage(){
     const dispatch = useDispatch()
     const currentUserId = useSelector(state => state.auth.id);
     const posts = useSelector(state => state.posts)
@@ -24,13 +24,11 @@ function Profile(){
             <div className='main-profile' >
                 <div className='profile-container' >
                     <Content posts={profilePosts} />
-                    <div >
-                        <UserAction />
-                    </div>
+                    <UserAction />
                 </div>
             </div>
         </>
     );
 }
 
-export default Profile;
+export default UserPage;

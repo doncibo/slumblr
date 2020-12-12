@@ -1,10 +1,10 @@
 .user-actions {
     font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Garuda, Verdana, Tahoma, sans-serif;
-    position: static;
+    position: fixed;
     float: right;
     /* right: -100px; */
     width: 400px;
-    height: 100vh;
+    height: auto;
     margin-top: 40px;
     margin-left: 0px;
     background-color: rgba(255, 255, 255, 0);

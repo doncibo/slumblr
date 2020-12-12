@@ -1,6 +1,8 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
 import clsx from 'clsx';
+
+//Material Ui/////////////////////////////////////////////////////
+import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardHeader from '@material-ui/core/CardHeader';
 import CardMedia from '@material-ui/core/CardMedia';
@@ -15,6 +17,13 @@ import FavoriteIcon from '@material-ui/icons/Favorite';
 import ShareIcon from '@material-ui/icons/Share';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
+import { MenuItem } from '@material-ui/core';
+import ClickAwayListener from '@material-ui/core/ClickAwayListener';
+import Grow from '@material-ui/core/Grow';
+import Paper from '@material-ui/core/Paper';
+import Popper from '@material-ui/core/Popper';
+import MenuList from '@material-ui/core/MenuList';
+/////////////////////////////////////////////////////////////////////////
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -42,6 +51,27 @@ const useStyles = makeStyles((theme) => ({
 function Post({post}) {
   const classes = useStyles();
   const [expanded, setExpanded] = React.useState(false);
+  const [open, setOpen] = React.useState(false);
+  const anchorRef = React.useRef(null);
+
+  const handleToggle = () => {
+    setOpen((prevOpen) => !prevOpen);
+  };
+  
+  const handleClose = (event) => {
+    if (anchorRef.current && anchorRef.current.contains(event.target)) {
+      return;
+    }
+    
+    setOpen(false);
+  };
+
+  function handleListKeyDown(event) {
+    if (event.key === 'Tab') {
+      event.preventDefault();
+      setOpen(false);
+    }
+  }
 
   const handleExpandClick = () => {
     setExpanded(!expanded);
@@ -56,7 +86,28 @@ function Post({post}) {
       <CardHeader
         action={
           <IconButton aria-label="settings">
-            <MoreVertIcon />
+            <MoreVertIcon 
+              ref={anchorRef}
+              aria-controls={open ? 'menu-list-grow' : undefined}
+              aria-haspopup="true"
+              onClick={handleToggle}
+            />
+            <Popper open={open} anchorEl={anchorRef.current} role={undefined} transition disablePortal>
+              {({ TransitionProps, placement }) => (
+                <Grow
+                  {...TransitionProps}
+                  style={{ transformOrigin: placement === 'bottom' ? 'center top' : 'center bottom' }}
+                >
+                  <Paper>
+                    <ClickAwayListener onClickAway={handleClose}>
+                    <MenuList autoFocusItem={open} id="menu-list-grow" onKeyDown={handleListKeyDown}>    
+                      <MenuItem >Delete</MenuItem>                               
+                    </MenuList>
+                    </ClickAwayListener>
+                  </Paper>
+                </Grow>
+              )}
+            </Popper>
           </IconButton>
         }
         title={post.title}

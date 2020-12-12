@@ -76,7 +76,7 @@
     border-radius: 5%;
     max-height: 70px;
     max-width: 70px;
-    background-color: rgb(48, 73, 97);
+    background-color: rgba(48, 73, 97, 0.144);
     background-image: url('./svg/profile.png');
     background-position: center;
     background-repeat: no-repeat;
@@ -92,9 +92,11 @@
     font-stretch: 100%;
     /* height: 2800px; */
     width: 100%;
-    background-color: lightslategrey;
+    background-color: rgba(119, 136, 153, 0);
+    border-top: 1px solid rgba(255, 255, 255, 0.109);
+    /* border-bottom: ; */
     margin-right: 0px;
-    border-radius: 5px;
+    /* border-radius: 5px; */
 }
 #posts {
     display: flex;

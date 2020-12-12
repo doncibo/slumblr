@@ -22,7 +22,7 @@ function Comp({posts}){
                 </div>
             </div>
             <div className='contentPosts'>
-                {posts.map(post => ( currentUserId === post.userId &&
+                {posts.map(post => (
                     <div id="posts" >
                         <div id='left-post' >
                         </div>
