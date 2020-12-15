@@ -11,9 +11,9 @@ function Comp(){
         <div className='user-actions'>
             <div id='action-box'>
                 <div id='username' >{currentUsername}</div>
-                {/* <Button id='action-button' >Posts</Button> */}
-                <Button id='action-button' >Follow</Button>
-                {/* <Button id='action-button' >Activity</Button> */}
+                <Button id='action-button' >Posts</Button>
+                <Button id='action-button' >Followers</Button>
+                <Button id='action-button' >Activity</Button>
             </div>
         </div>
     )

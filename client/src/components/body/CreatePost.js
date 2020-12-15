@@ -12,6 +12,7 @@ import '../../style/createpost.css'
 //Material Ui
 import { Button } from '@material-ui/core';
 import Modal from '@material-ui/core/Modal';
+import CameraIcon from '@material-ui/icons/Camera';
 // import ClickAwayListener from '@material-ui/core/ClickAwayListener';
 // import Grow from '@material-ui/core/Grow';
 // import Paper from '@material-ui/core/Paper';
@@ -54,7 +55,8 @@ function Comp(){
                 <img src={Text} alt='' ></img>Text
             </Button>
             <Button id='photo-post' onClick={handlePhotoOpen}>
-                <img src={Camera} alt=''></img>Photo
+                {/* <img src={Camera} alt=''></img>Photo */}
+                <CameraIcon />Photo
             </Button>
             <Button id='link-post' onClick={handleLinkOpen}>
                 <img src={LinkVariant} alt=''></img>Link

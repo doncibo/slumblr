@@ -39,7 +39,7 @@ export const createFollow = (followeeId, followerId) => async dispatch => {
 export default function reducer(state = [], action) {
 	switch (action.type) {
 		case GET_FOLLOW:
-			return [...action.follow ];
+			return [...action.follow];
 
 		default:
 			return state;

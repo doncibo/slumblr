@@ -7,6 +7,7 @@ function Comp(){
   
     return(
         <div className="search-page">
+            
         </div>
     )
 }

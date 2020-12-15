@@ -3,7 +3,7 @@ import Button from '@material-ui/core/Button';
 import { Link } from 'react-router-dom';
 import Logo from '../style/svg/slumblr_text.svg'
 import HomeContent from '../components/body/HomeContent'
-import UserAction from '../components/body/UserActions'
+import ProfileAction from '../components/body/ProfileActions'
 import DemoLoginButton from '../components/nav_comp/DemoLoginButton'
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchPosts } from '../store/posts';
@@ -39,7 +39,7 @@ export function LoggedIn (){
             <div className='home-content' >
                 <HomeContent posts={posts} />
                 <div>
-                    <UserAction />
+                    <ProfileAction />
                 </div>
             </div>
         </div>

@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { fetchPosts } from '../store/posts';
 import '../style/profile.css'
 import Content from '../components/body/Content'
-import UserAction from '../components/body/UserActions'
+import ProfileAction from '../components/body/ProfileActions'
 
 function Profile(){
     const dispatch = useDispatch()
@@ -25,7 +25,7 @@ function Profile(){
                 <div className='profile-container' >
                     <Content posts={profilePosts} />
                     <div >
-                        <UserAction />
+                        <ProfileAction />
                     </div>
                 </div>
             </div>
