@@ -4,7 +4,7 @@ import { fetchPosts } from '../store/posts';
 import '../style/profile.css'
 import Content from '../components/body/Content'
 import ProfileAction from '../components/body/ProfileActions'
-
+ 
 function Profile(){
     const dispatch = useDispatch()
     const currentUserId = useSelector(state => state.auth.id);
@@ -29,7 +29,7 @@ function Profile(){
                     </div>
                 </div>
             </div>
-        </>
+        </> 
     );
 }
 
