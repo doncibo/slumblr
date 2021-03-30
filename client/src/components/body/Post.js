@@ -22,7 +22,7 @@ import ClickAwayListener from '@material-ui/core/ClickAwayListener';
 import Grow from '@material-ui/core/Grow';
 import Paper from '@material-ui/core/Paper';
 import Popper from '@material-ui/core/Popper';
-import MenuList from '@material-ui/core/MenuList';
+import MenuList from '@material-ui/core/MenuList'
 /////////////////////////////////////////////////////////////////////////
 
 const useStyles = makeStyles((theme) => ({
